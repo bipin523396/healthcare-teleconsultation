@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+body {
+  @apply text-gray-800;
+}
+
+/* Button Focus Styles */
+button:focus, a:focus {
+  @apply outline-none ring-2 ring-blue-900 ring-opacity-50;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-900 bg-opacity-70 rounded hover:bg-opacity-100 transition-colors;
+}
